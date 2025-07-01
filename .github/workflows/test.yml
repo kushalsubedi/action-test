@@ -3,7 +3,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches:
-        - 'test'
         - 'dev'
 jobs:
   Explore-GitHub-Actions:
@@ -20,6 +19,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  say_hi:
+  say-hi:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "K xa Kushal Subedi"
