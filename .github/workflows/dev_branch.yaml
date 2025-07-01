@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
-  push:
+  pull_request:
     branches:
       - 'main'
 jobs:
@@ -18,8 +18,4 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-  say-hi:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "K xa Kushal Subedi"
+      - run: echo "🍏 This job's status is ${{ job.status }}"
