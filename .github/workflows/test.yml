@@ -20,3 +20,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  say_hi:
+    steps:
+      - run: echo "K xa Kushal Subedi"
